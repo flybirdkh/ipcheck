@@ -27,12 +27,7 @@ def Search():
                 print("[Error]: Invalid ip address.")
                 continue
 
-            if method == 1:
-                data = searcher.btreeSearch(line)
-            elif method == 2:
-                data = searcher.binarySearch(line)
-            else:
-                data = searcher.memorySearch(line)
+            data = searcher.btreeSearch(line)
 
             if isinstance(data, dict):
                 print("%s|%s" % (line, data["region"].decode('utf-8')))
